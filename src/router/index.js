@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import EachTitle from '@/views/EachTitle.vue'
+import Detail from '@/views/Detail.vue'
 
 const router = createRouter({
     history: createWebHistory(
@@ -9,6 +11,16 @@ const router = createRouter({
             name: 'home',
             component: HomeView,
         },
+        {
+            path: '/title/:groupId',
+            name: 'title',
+            component: EachTitle,
+        },
+        {
+            path: '/detail/:id',
+            name: 'detail',
+            component: Detail,
+        }
         // {
         //   path: '/about',
         //   name: 'about',
