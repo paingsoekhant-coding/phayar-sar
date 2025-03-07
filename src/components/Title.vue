@@ -19,7 +19,7 @@ onMounted(async () => {
   <div class="basis-1/3 p-4 text-center">
     <div class="flex justify-center">
       <RouterLink :to="{ name: 'home' }">
-        <img src="../assets/favicon.png" alt="" class="w-32" />
+        <img src="/assets/favicon.png" alt="" class="w-32" />
       </RouterLink>
     </div>
     <div class="">
