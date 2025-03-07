@@ -1,5 +1,19 @@
 <script setup>
-import title from "@/assets/data/data.json";
+import { ref, onMounted } from "vue";
+
+const title = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/src/assets/data/data.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    title.value = await response.json();
+  } catch (error) {
+    console.error("Error fetching JSON data:", error);
+  }
+});
 </script>
 <template>
   <div class="basis-1/3 p-4 text-center">

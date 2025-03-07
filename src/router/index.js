@@ -17,7 +17,7 @@ const router = createRouter({
             component: EachTitle,
         },
         {
-            path: '/detail/:id',
+            path: '/detail/:groupId/:id',
             name: 'detail',
             component: Detail,
         }
