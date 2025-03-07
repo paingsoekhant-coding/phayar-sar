@@ -5,7 +5,7 @@ const title = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch("/src/assets/data/data.json");
+    const response = await fetch("/assets/data/data.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

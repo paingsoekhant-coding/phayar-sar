@@ -8,11 +8,11 @@ const route = useRoute();
 
 const fetchData = async () => {
   try {
-    const dataResponse = await fetch("/src/assets/data/data.json");
+    const dataResponse = await fetch("/assets/data/data.json");
     dataJson.value = await dataResponse.json();
     if (route.params.groupId && route.params.id) {
       const oneResponse = await fetch(
-        `/src/assets/data/${route.params.groupId}/${route.params.id}.json`
+        `/assets/data/${route.params.groupId}/${route.params.id}.json`
       );
       oneJson.value = await oneResponse.json();
     }
